@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticket Reservation</title>
+    <link href={{ url_for('static', filename='style.css' ) }} rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand nav-txt" href="#">Railway Ticket Reservation</a>
+            <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/ad_dash">Home</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log out</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="#"><b class="uname">{{ user }}</b></a>
+                </li>
+
+
+            </ul>
+            <!-- </div> -->
+        </div>
+    </nav>
+    <div class="welcome">
+        <marquee direction="left">
+            <h1> Welcome to Railway Ticket Reservation System </h1>
+        </marquee>
+    </div>
+
+    <div class="booking-form">
+
+        <div class="tic-form">
+            <img src={{ url_for('static', filename='train.png' ) }} width="100" height="70" />
+            <div class="book">
+                <div class="login-header">
+                    <h3>Admin Dashboard</h3>
+                    <h4> Train Booking Details</h4>
+
+                </div>
+                <div class="msg">
+                    <b style="color: red;">{{ msg }}</b><br><br>
+                </div>
+
+                <center>
+
+                    <div class="train-t">
+
+                        <table border="1" class="center" style="text-align: center;">
+
+                            <tr>
+                                <th>Ticket Id</th>
+                                <th>Train No.</th>
+                                <th>Train Name</th>
+                                <th>User ID</th>
+                                <th>User Name</th>
+                                <th>Passenger_Name</th>
+                                <th>Arrive</th>
+                                <th>Destinations</th>
+                                <th>Travel Date</th>
+                                <th>Arrival_Time</th>
+                                <th>Departure_Time</th>
+                                <th>Passenger_Count</th>
+                                <th>Total Fare</th>
+                            </tr>
+
+
+                            {% for i in data %}
+                            <tr>
+                                <td>{{ i.Booking_Id}}</td>
+                                <td>{{ i.TrainNo }}</td>
+                                <td>{{ i.T_Name }}</td>
+                                <td>{{ i.userID}}</td>
+                                <td>{{ i.Username}}</td>
+                                <td>{{ i.Passenger_name}}</td>
+                                <td>{{ i.Arrive }}</td>
+                                <td>{{ i.Destination }}</td>
+                                <td>{{ i.Travel_Date}}</td>
+                                <td>{{ i.Arrival_Time }}</td>
+                                <td>{{ i.Departure_Time }}</td>
+                                <td>{{ i.PassengerNo}}</td>
+                                <td>{{ i.Total_Fare }}</td>
+                            </tr>
+                            {% endfor %}
+
+                        </table>
+                    </div>
+                </center>
+            </div>
+            <form class="booking-form" action="/delete_ticket" method="post">
+                <h4 class="txt-color">Delete Ticket</h4>
+                <fieldset class="txt-styl userdel">
+
+                    <nobr class="top-pad"><label>Ticket ID: </label>
+                        <input type="text" name="ticket_id" placeholder="Enter Ticket ID">
+
+                    </nobr>
+                    <br>
+                </fieldset>
+                <div class="btn-delete">
+                    <button type="submit">Delete</button>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    </form>
+    </div>
+
+
+
+
+</body>
+
+</html>

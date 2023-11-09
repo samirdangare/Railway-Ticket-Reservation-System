@@ -1,0 +1,155 @@
+.welcome{
+    margin-top: 20px;
+    color: rgb(240, 22, 22);
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-txt{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+.main-form{
+      
+    font-family: 'Times New Roman', Times, serif;
+    text-align-last: center;
+    justify-content: center; 
+}
+
+.login-page {
+  width: 360px;
+  padding: 4% 0 0;
+  margin: auto;
+}
+.login-page .form .login{
+  margin-top: 15px;
+margin-bottom: 26px;
+}
+
+
+  
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background-color: #328f8a;
+    background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+  }
+  .form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  body {
+    background-color: #328f8a;
+    background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .login-header{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .login-form{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .signup-form{
+    margin-top: 40px;
+  margin-bottom: 26px;
+  }
+
+  .dash{
+    margin-top: 40px;
+    
+  }
+  .dash-form{
+    text-align: -webkit-center;
+  }
+  .btn-form{
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+  button{
+    display: block;
+    background-color: rgb(33, 187, 234);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+    cursor: pointer;
+}
+.rd{
+  margin-left: 17px;
+  margin-right: 195px;
+}
+
+.uname{
+ color: rgb(255, 94, 0);
+}
+
+.bform {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 660px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  
+}
+
+
+tbody, td, tfoot, th, thead, tr , .tablec{
+  border-width: 1px;
+  border: 1px solid;
+  text-align: center;
+  padding: 3px;
+  /* margin: 4px; */
+}
+.train-t{
+  text-align: center;
+}
+

@@ -1,0 +1,88 @@
+<fieldset>
+    <nobr> <label>From : </label>
+     <input list="Arrive" name="Arrive" required>
+     <datalist id='Arrive'>
+         <option value="Pune">Pune
+         <option value="Mumbai">Mumbai
+         <option value="Amravati">Satara
+         <option value="Shirpur">Kolhapur
+     </datalist></nobr>
+ <nobr>
+     <label>To : </label>
+     <input list="Destination" name="Destination" required>
+     <datalist id='Destination'>
+         <option value="Pune">Pune
+         <option value="Mumbai">Mumbai
+         <option value="Amravati">Amravati
+         <option value="Shirpur">Shirpur
+     </datalist></nobr>
+ <nobr><label>Travel Date : </label>
+     <input type="date" name="Travel_Date"></nobr>
+ <nobr><label>Arrival Time : </label>
+     <input type="radio" name="Arrival_time" value="08:00:00"><label>8 AM</label>
+     <input type="radio" name="Arrival_time" value="20:00:00"><label>8 PM</label></nobr>
+ <nobr><label>No. of Passengers : </label>
+     <input type="number" name="PassengerNo" placeholder="Enter Passenger No" step="any" min="1" required></nobr>
+     
+ </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="booking-form">
+        
+    <div class="bform">
+      <img src={{ url_for('static', filename = 'train.png') }}  width="100" height="70"/>
+        <div class="book">
+            <div class="login-header">
+            <h3>Book Your Ticket</h3>
+            <p> Available Trains</p>
+        </div>
+            <div class="msg"><b>{{ msg }}</b><br>
+       
+
+        <div class="train-table">
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Train No.</th>
+                        <th>Name</th>
+                        <th>Arrive</th>
+                        <th>Destinations</th>
+                        <th>Arrival_Time</th>
+                        <th>Departure_Time</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{ i.TrainNo }}</td>   
+                        <td>{{ i.Name }}</td>
+                        <td>{{ i.Arrive }}</td>
+                        <td>{{ i.Destination }}</td>
+                        <td>{{ i.Arrival_Time }}</td>
+                        <td>{{ i.Departure_Time }}</td>
+                        <td>{{ i.Fare }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <form class="booking-form" action="/book" method="post">
+        <button type="submit">Sign Up</button>
+    </form>
+    </div>
+  </div>

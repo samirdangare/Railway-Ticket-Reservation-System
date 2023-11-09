@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticket Reservation</title>
+    <link href={{ url_for('static', filename='style.css' ) }} rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand nav-txt" href="#">Railway Ticket Reservation</a>
+                <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/ad_dash">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Log out</a>
+                    </li>
+                   
+               
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><b class="uname">{{ user }}</b></a>
+                    </li>
+
+
+                </ul>
+                <!-- </div> -->
+            </div>
+        </nav>
+
+        <!-- <div class="ad-dash">
+            <h2><b>
+                    Admin Dashboard
+            </h2></b>
+        </div> -->
+
+        <div class="welcome">
+            <marquee direction="left">
+                <h1> Welcome to Railway Ticket Reservation System </h1>
+            </marquee>
+        </div>
+
+        <div class="booking-form">
+
+            <div class="bform">
+                <img src={{ url_for('static', filename='train.png' ) }} width="100" height="70" />
+                <div class="book">
+                    <div class="login-header">
+                        <b><h2>Admin Dashboard</h2></b>
+
+
+                    </div>
+                    <div class="msg">
+                        <b>{{ msg }}</b><br>
+                    </div>
+                </div>
+
+                <div class="dash-form">
+                    <form class="btn-form" action="/train_details"><button class="button" type="submit">Train Details</button></form>
+                    <form class="btn-form" action="/user_details"><button class="button" type="submit">User Details</button></form>
+                    <form class="btn-form" action="/tickets_info"><button class="button" type="submit">Tickets</button></form>
+                  </div>
+
+                
+            </div>
+        </div>
+
+    </body>
+
+</html>
